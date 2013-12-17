@@ -13,25 +13,25 @@ public class Bishop extends Chessman {
 		ArrayList<Position> moveList = new ArrayList<Position>();
 		Position nextPosition = this.getPosition();
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx() + 1, nextPosition.getPosy() + 1);
+			nextPosition = new Position(nextPosition.getX() + 1, nextPosition.getY() + 1);
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 
 		nextPosition = this.getPosition();
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx() - 1, nextPosition.getPosy() + 1);
+			nextPosition = new Position(nextPosition.getX() - 1, nextPosition.getY() + 1);
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 
 		nextPosition = this.getPosition();
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx() + 1, nextPosition.getPosy() - 1);
+			nextPosition = new Position(nextPosition.getX() + 1, nextPosition.getY() - 1);
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 
 		nextPosition = this.getPosition();
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx() - 1, nextPosition.getPosy() - 1);
+			nextPosition = new Position(nextPosition.getX() - 1, nextPosition.getY() - 1);
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 		
@@ -40,7 +40,7 @@ public class Bishop extends Chessman {
 
 	@Override
 	public String toString() {
-		return "Knight " + this.getPosition();
+		return "Bishop: " + this.getPosition();
 	}
 
 }

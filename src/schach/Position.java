@@ -2,7 +2,7 @@ package schach;
 
 public class Position {
 	
-	int posx, posy;
+	private int posx, posy;
 
 	public Position(int posx, int posy) {
 		super();
@@ -10,11 +10,11 @@ public class Position {
 		this.posy = posy;
 	}
 	
-	public int getPosx() {
+	public int getX() {
 		return posx;
 	}
 
-	public int getPosy() {
+	public int getY() {
 		return posy;
 	}
 	
@@ -35,6 +35,6 @@ public class Position {
 
 	@Override
 	public String toString() {
-		return "[posx=" + posx + ", posy=" + posy + "]";
+		return "(" + posx + "/" + posy + ")";
 	}
 }

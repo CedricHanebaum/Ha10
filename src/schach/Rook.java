@@ -14,25 +14,25 @@ public class Rook extends Chessman{
 		Position nextPosition = this.getPosition();
 		
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx() + 1, nextPosition.getPosy());
+			nextPosition = new Position(nextPosition.getX() + 1, nextPosition.getY());
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 
 		nextPosition = this.getPosition();
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx() - 1, nextPosition.getPosy());
+			nextPosition = new Position(nextPosition.getX() - 1, nextPosition.getY());
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 		
 		nextPosition = this.getPosition();
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx(), nextPosition.getPosy() + 1);
+			nextPosition = new Position(nextPosition.getX(), nextPosition.getY() + 1);
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 		
 		nextPosition = this.getPosition();
 		while(nextPosition.isValid()){
-			nextPosition = new Position(nextPosition.getPosx(), nextPosition.getPosy() - 1);
+			nextPosition = new Position(nextPosition.getX(), nextPosition.getY() - 1);
 			if(nextPosition.isValid()) moveList.add(nextPosition);
 		}
 		
@@ -41,7 +41,7 @@ public class Rook extends Chessman{
 
 	@Override
 	public String toString() {
-		return "Rook " + this.getPosition();
+		return "Rook: " + this.getPosition();
 	}
 
 }
