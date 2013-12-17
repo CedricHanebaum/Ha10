@@ -2,8 +2,6 @@ package schach;
 
 public class TestClass {
 
-	public static final int RESOLUTION = 8;
-
 	public static void main(String[] args) {
 		Rook rook = new Rook(new Position(4, 5));
 		System.out.println(rook);

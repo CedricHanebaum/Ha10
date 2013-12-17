@@ -16,7 +16,7 @@ public class Knight extends Chessman {
 			int gegenkathete = (int) (Math.sin((Math.PI / (8 / 2)) * i + (Math.PI / 8)) * 2.7);
 			int ankathete = (int) (Math.cos((Math.PI / (8 / 2)) * i + (Math.PI / 8)) * 2.7);
 			Position tmpPos = new Position(gegenkathete + this.getPosition().getX(), ankathete + this.getPosition().getY());
-			if (tmpPos.getX() <= 8 && tmpPos.getX() >= 1 && tmpPos.getY() <= 8 && tmpPos.getY() >= 1) {
+			if (tmpPos.isValid()) {
 				tmpList.add(tmpPos);
 			}
 		}
